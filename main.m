@@ -8,8 +8,14 @@ width=v.Width; % Width of video in pixels
 height=v.Height; % Height of video in pixels
 %% Parse Images
 allFrames=read(v); % Parse all frames into a 4D uint8 structure
+allFrames_gray=zeros(width,height,fnum);
+for ii=1:fnum
+    allFrames_gray(:,:,ii)=rgb2gray(allFrames(:,:,:,ii));
+end
+clear allFrames
 %% Create Calibration Scale
-imshow(allFrames(:,:,:,1), []);
+f=figure(1);
+imshow(allFrames_gray(:,:,1), []);
 set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
 % Make caption the instructions.
 title('Left-click first point.  Right click last point.');
@@ -29,6 +35,13 @@ realWorldNumericalValue = str2double(caUserInput{1});
 units = char(caUserInput{2});
 spatialCalibration = realWorldNumericalValue / distanceInPixels;
 realWorldDistance = distanceInPixels * spatialCalibration;
+fprintf('%f pixels = %f %s \n', ...
+    distanceInPixels, realWorldDistance, units);
+fprintf('Calibration Scale = %f %s/pixels \n',spatialCalibration,units);
+close(f)
 %% Process Single Image
+im=allFrames_gray(:,:,1);
+imshow(im,[])
+
 %% Batch Process Remaining Images
 %% Plot GOA over Time
