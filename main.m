@@ -40,12 +40,11 @@ fprintf('%f pixels = %f %s \n', ...
 fprintf('Calibration Scale = %f %s/pixels \n',spatialCalibration,units);
 close(f)
 %% Process Single Image
-im=allFrames(:,:,150); % Load 1st frame
+im=allFrames(:,:,150); % Load test frame
 im2=imadjust(im,[50 250]/255); % Adjust frame contrast 
 im3=imgaussfilt(im2,1); % Add gaussian blur to image
-% im4=imbinarize(im3);
 
-X=im3; % Temporarily image as X
+X=im3; % Temporarily store image as X
 
 % Graph cut
 foregroundInd = [8217 8219 8222 8223 8226 8228 8231 8234 8236 8237 8239 8243 8245 8741 8744 8745 8746 8776 8778 8780 8782 9268 9269 9794 9795 10321 10322 10847 10848 10850 11374 11375 11376 11902 11903 12431 12960 12961 13488 13489 14018 14547 ];
@@ -72,16 +71,23 @@ BW = activecontour(X, BW, iterations, 'Chan-Vese');
 maskedImage = X;
 maskedImage(~BW) = 0;
 
+% Binarize image
 im4=imbinarize(maskedImage);
+
+% Calculate area of mask region
 pixelArea = bwarea(im4);
+
+% Convert area from pixel^2 to mm^2
 pixelArea = pixelArea*spatialCalibration^2;
+
+% Report GOA in units of cm^2
 fprintf('GOA = %f %s%c \n',pixelArea*.01,'cm',178);
 
-
+% Overlay original grayscale image with mask (in red)
 imshow(im);
-green = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
+red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
 hold on
-h=imshow(green);
+h=imshow(red);
 set(h, 'AlphaData', im4)
 
 %% Batch Process Remaining Images
