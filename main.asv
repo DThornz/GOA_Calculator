@@ -167,9 +167,9 @@ g=gca;
 p=plot(time,smooth(pixelArea_out));
 hold on
 p.Color='r';
-p.LineWidth=4;
+p.LineWidth=15;
 f.Color='w';
-g.FontSize=30;
+g.FontSize=40;
 g.Box='off';
 g.FontName='Times New Roman';
 g.FontWeight='bold';
@@ -192,11 +192,10 @@ writerObj.FrameRate = 10;
 % set the seconds per image
 % open the video writer
 open(writerObj);
-f.Visible='off';
 for ii=1:fnum
     subplot(1,2,1)
     hold on
-    p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',40);
+    p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',80);
     subplot(1,2,2)
     imshow(im);
     red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));

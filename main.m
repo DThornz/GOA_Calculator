@@ -195,7 +195,7 @@ open(writerObj);
 for ii=1:fnum
     subplot(1,2,1)
     hold on
-    p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',50);
+    p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',80);
     subplot(1,2,2)
     imshow(im);
     red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
