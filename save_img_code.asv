@@ -1,0 +1,5 @@
+imshow(m);
+f=gcf;
+f.Position=[0 0 1080*2 2*1080];
+f.Color='w';
+print(f,'Active_Contour.tiff','-dtiff','-r600');  
