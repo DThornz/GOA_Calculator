@@ -24,5 +24,6 @@ f.Color='w';
 str1=[file_name '.' file_type];
 str2=['-d' file_type];
 str3=['-r' res];
-fprintf('Saving image as "%s" \n with a resolution of %s DPI \n into current working folder.\n',str1,res)
+str4=sprintf('Finished saving image as "%s" with a resolution of %s DPI into current working folder.\n',str1,res);
 print(f,str1,str2,str3);
+msgbox(str4,'Saving Image');
