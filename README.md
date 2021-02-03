@@ -9,6 +9,11 @@
 
 Given an input planar image of valve (example: aortic) the code will find the geometric orifice area (GOA) in cm<sup>2</sup> and output an the mask of the region along with an overlay using the original image. You must know at least one real world dimension of your image, either via a scale bar or knowledge of geometric dimensions (leaflet length, annular diameter, etc). Final output examples are shown below.
 
+
+### Original
+<a href="url"><img src="https://github.com/DThornz/GOA_Calculator/blob/main/Exported%20Image%20Results/Original.png" align="center" height="500" width="500" ></a>
+
+
 ### Mask
 <a href="url"><img src="https://github.com/DThornz/GOA_Calculator/blob/main/Exported%20Image%20Results/Masked_Img.png" align="center" height="500" width="500" ></a>
 
