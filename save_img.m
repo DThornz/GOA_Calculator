@@ -6,7 +6,6 @@ function save_img(im,file_name,file_type,res)
     file_name: Name of image to save
     file_type: File type for image (Ex: jpeg, png, tiff, etc)
     res: Pixel resolution (Ex: 300, 600, 900, etc)
-
 %}
 
 if nargin < 2
