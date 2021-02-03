@@ -88,12 +88,11 @@ pixelArea = pixelArea*spatialCalibration^2;
 fprintf('GOA = %f %s%c \n',pixelArea*.01,'cm',178);
 
 % Overlay original grayscale image with mask (in red)
-imshow(im);
+imshow(im); 
 red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
 hold on
 h=imshow(red);
 set(h, 'AlphaData', im4)
-
 %% Batch Process Remaining Images
 % Pre-allocation
 im_mask_out=zeros(width,height,fnum);
