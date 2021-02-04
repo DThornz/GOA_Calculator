@@ -10,7 +10,7 @@ The GOA is one of the easiest metrics to calculate as it is solely dependent on 
 
 ### More information regarding GOA, EOA, and Gorlin's Area can be found in the reference given below.
 
-1. Garcia D, Kadem L. What do you mean by aortic valve area: geometric orifice area, effective orifice area, or Gorlin area? J Heart Valve Dis. 2006 Sep;15(5):601-8. PMID: 17044363.
+1. [Garcia D, Kadem L. What do you mean by aortic valve area: geometric orifice area, effective orifice area, or Gorlin area? J Heart Valve Dis. 2006 Sep;15(5):601-8. PMID: 17044363.](https://pubmed.ncbi.nlm.nih.gov/17044363/)
 
 ## What does this code do?
 
