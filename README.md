@@ -43,6 +43,9 @@ Given a starting image there are a number of image processing steps done before 
 
 [Feel free to fork this on GitHub](https://github.com/DThornz/GOA_Calculator/fork)
 
+## References
+1. Garcia D, Kadem L. What do you mean by aortic valve area: geometric orifice area, effective orifice area, or gorlin area? J Heart Valve Dis. 2006 Sep;15(5):601-8. PMID: 17044363.
+
 
 
 
