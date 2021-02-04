@@ -1,9 +1,6 @@
 # GOA Calculator
 
-## This code was made to work with MATLAB R2020b
-
-## This code requires the following MATLAB Toolbox:
-1. Image Processing 
+## This code was made to work with MATLAB R2020b and requires the Image Processing Toolbox work properly.
 
 ## What is GOA?
 
