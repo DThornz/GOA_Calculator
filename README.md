@@ -7,13 +7,13 @@
 
 ## What is GOA?
 
-If you look in literature regarding aortic valve size and hemodynamic health there is a popular term that is used called the Aortic Valve Area (AVA) and it is a measure of the workable flow area of the aortic valve and is measured by either Doppler echocardiography, catherterization or CT/Echo planimetry. However, each of these methods finds a parameter that is unique from the others: Doppler finds the effective valve area (EOA), catherization finds the Gorlin area, and CT/Echo planimetry finds the geometric valve area (GOA). All of these parameters have been refered to as AVA but they rarely ever match each other except in idealized cases.
+If you look in literature regarding aortic valve size and hemodynamic health there is a popular term that is used called the Aortic Valve Area (AVA) and it is a measure of the workable flow area of the aortic valve and is measured by either Doppler echocardiography, catherterization or CT/Echo planimetry. However, each of these methods finds a parameter that is unique from the others: Doppler finds the effective valve area (EOA), catherization finds the Gorlin area, and CT/Echo planimetry finds the geometric valve area (GOA). All of these parameters have been referred to as AVA but they rarely ever match each other except in idealized cases.
 
 The GOA is one of the easiest metrics to calculate as it is solely dependent on having access to a planar image of the valve.
 
 ### More information regarding GOA, EOA, and Gorlin's Area can be found in the reference given below.
 
-1. Garcia D, Kadem L. What do you mean by aortic valve area: geometric orifice area, effective orifice area, or gorlin area? J Heart Valve Dis. 2006 Sep;15(5):601-8. PMID: 17044363.
+1. Garcia D, Kadem L. What do you mean by aortic valve area: geometric orifice area, effective orifice area, or Gorlin area? J Heart Valve Dis. 2006 Sep;15(5):601-8. PMID: 17044363.
 
 ## What does this code do?
 
