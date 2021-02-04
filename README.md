@@ -5,10 +5,15 @@
 ## This code requires the following MATLAB Toolbox:
 1. Image Processing 
 
+## What is GOA?
+
+If you look in literature regarding aortic valve size and hemodynamic health there is a popular term that is used called the Aortic Valve Area (AVA) and it is a measure of the workable flow area of the aortic valve and is measured by either Doppler echocardiography, catherterization or CT/Echo planimetry. However, each of these methods finds a parameter that is unique from the others: Doppler finds the effective valve area (EOA), catherization finds the Gorlin area (GOA), and CT/Echo planimetry finds the geometric valve area (GOA). All of these parameters have been refered to as AVA but they rarely ever match each other except in idealized cases.
+
+The GOA is one of the easiest metrics to calculate as it is solely dependent on having access to a planar image of the valve.
+
 ## What does this code do?
 
 Given an input planar image of valve (example: aortic) the code will find the geometric orifice area (GOA) in cm<sup>2</sup> and output an the mask of the region along with an overlay using the original image. You must know at least one real world dimension of your image, either via a scale bar or knowledge of geometric dimensions (leaflet length, annular diameter, etc). Final output examples are shown below.
-
 
 ### Original
 <a href="url"><img src="https://github.com/DThornz/GOA_Calculator/blob/main/Exported%20Image%20Results/Original.png" align="center" height="500" width="500" ></a>
