@@ -54,7 +54,7 @@ close all force
 frames=1:fnum;
 time=0.04*frames/fps;
 f=figure('units','pixels','position',[0 0 1920*2 2*1080/1.5]);
-subplot(1,2,1)
+% subplot(1,2,1)
 g=gca;
 p=plot(time,smooth(pixelArea_out));
 hold on
@@ -70,12 +70,12 @@ ylabel('GOA (cm^{2})')
 xlabel('Time (s)')
 subplot(1,2,2)
 % Overlay original grayscale image with mask (in red)
-im=allFrames_gray(:,:,1); % Load 1st frame
+im=allFrames_gray(:,:,100); % Load 1st frame
 imshow(im);
 red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
 hold on
 h=imshow(red);
-set(h, 'AlphaData', im_mask_out(:,:,1))
+set(h, 'AlphaData', im_mask_out(:,:,100))
 
 %% Plot and Create Movie
 % create the video writer with 1 fps
