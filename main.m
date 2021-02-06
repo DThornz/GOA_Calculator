@@ -56,7 +56,7 @@ time=0.04*frames/fps;
 f=figure('units','pixels','position',[0 0 1920*2 2*1080/1.5]);
 % subplot(1,2,1)
 g=gca;
-p=plot(time,smooth(pixelArea_out));
+p=plot(time,smooth(pixelArea_out)/100);
 hold on
 p.Color='r';
 p.LineWidth=15;
