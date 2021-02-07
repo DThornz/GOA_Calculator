@@ -23,7 +23,7 @@ im=allFrames_gray(:,:,1);
 %% Process Single Image
 im=allFrames_gray(:,:,100); % Load test frame
 [im_binarized, pixelArea]=process_img(im,spatialCalibration);
-% Overlay original grayscale image with mask (in red)
+%% Overlay original grayscale image with mask (in red)
 imshow(im); 
 red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
 hold on
@@ -79,25 +79,25 @@ set(h, 'AlphaData', im_mask_out(:,:,100))
 
 %% Plot and Create Movie
 % create the video writer with 1 fps
-writerObj = VideoWriter('GOA_Video.avi','Uncompressed AVI');
-writerObj.FrameRate = 10;
-% set the seconds per image
-% open the video writer
-open(writerObj);
-for ii=1:fnum
-    subplot(1,2,1)
-    hold on
-    p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',80);
-    subplot(1,2,2)
-    imshow(im);
-    red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
-    hold on
-    h=imshow(red);
-    set(h, 'AlphaData', im_mask_out(:,:,ii))
-    drawnow
-    frame = getframe(gcf) ;
-    writeVideo(writerObj, frame);
-    delete(p2);
-end
-% close the writer object
-close(writerObj);
+% writerObj = VideoWriter('GOA_Video.avi','Uncompressed AVI');
+% writerObj.FrameRate = 10;
+% % set the seconds per image
+% % open the video writer
+% open(writerObj);
+% for ii=1:fnum
+%     subplot(1,2,1)
+%     hold on
+%     p2=plot(time(ii),smooth(pixelArea_out(ii)),'g.','MarkerSize',80);
+%     subplot(1,2,2)
+%     imshow(im);
+%     red = cat(3, ones(size(im)), zeros(size(im)), zeros(size(im)));
+%     hold on
+%     h=imshow(red);
+%     set(h, 'AlphaData', im_mask_out(:,:,ii))
+%     drawnow
+%     frame = getframe(gcf) ;
+%     writeVideo(writerObj, frame);
+%     delete(p2);
+% end
+% % close the writer object
+% close(writerObj);
