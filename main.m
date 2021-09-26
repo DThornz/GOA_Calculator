@@ -8,7 +8,7 @@ width=v.Width; % Width of video in pixels
 height=v.Height; % Height of video in pixels
 %% Parse Images
 allFrames=read(v); % Parse all frames into a 4D uint8 structure
-allFrames_gray=zeros(width,height,fnum); % Pre-allocate grayscale images
+allFrames_gray=zeros(height,width,fnum); % Pre-allocate grayscale images
 allFrames_gray=cast(allFrames_gray,'uint8');
 for ii=1:fnum
     im=allFrames(:,:,:,ii); % Load frame
